@@ -1,0 +1,1 @@
+global.camera.screen_shake(0.5, 20);
