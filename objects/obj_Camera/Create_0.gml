@@ -7,7 +7,7 @@ delay = 10;
 
 camera_id = view_get_camera(view_camera[0]);
 
-camera_width = 1766;
+camera_width = 1366;
 camera_height = 1366;
 camera_angle = 0;
 

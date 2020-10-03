@@ -12,8 +12,8 @@ if(instance_exists(target)){
 	new_x = lerp(x, target.x - scale*camera_width/2 + xoff, 1/delay);
 	new_y = lerp(y, target.y - scale*camera_height/2 + yoff, 1/delay);
 	
-	scale = 2.5*(target.radius - target.radius_range[0])/(target.radius_range[1] - target.radius_range[0]);
-	scale = clamp(scale, 1, 2.5);
+	scale = 4*(target.radius - target.radius_range[0])/(4000 - target.radius_range[0]);
+	scale = clamp(scale, 1, 4);
 	camera_set_view_size(camera_id, scale*camera_width, scale*camera_height);
 }
 

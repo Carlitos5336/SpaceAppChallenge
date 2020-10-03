@@ -27,6 +27,7 @@
     {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_Planet","path":"objects/obj_Planet/obj_Planet.yy",},"parent":{"name":"obj_Asteroid","path":"objects/obj_Asteroid/obj_Asteroid.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_Asteroid","path":"objects/obj_Asteroid/obj_Asteroid.yy",},"parent":{"name":"obj_Asteroid","path":"objects/obj_Asteroid/obj_Asteroid.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_SpaceShip","path":"objects/obj_SpaceShip/obj_SpaceShip.yy",},"parent":{"name":"obj_Asteroid","path":"objects/obj_Asteroid/obj_Asteroid.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"parent":{"name":"obj_Asteroid","path":"objects/obj_Asteroid/obj_Asteroid.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],

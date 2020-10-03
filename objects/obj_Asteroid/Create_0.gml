@@ -7,3 +7,5 @@ grav = 0.08;
 h_speed = 0;
 
 move_speed = 0.4;
+
+drop = true;

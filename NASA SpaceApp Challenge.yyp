@@ -16,7 +16,6 @@
     {"id":{"name":"fnt_Title","path":"fonts/fnt_Title/fnt_Title.yy",},"order":0,},
     {"id":{"name":"spr_Ship","path":"sprites/spr_Ship/spr_Ship.yy",},"order":3,},
     {"id":{"name":"NASA","path":"rooms/NASA/NASA.yy",},"order":2,},
-    {"id":{"name":"spr_Circle","path":"sprites/spr_Circle/spr_Circle.yy",},"order":16,},
     {"id":{"name":"Master","path":"objects/Master/Master.yy",},"order":12,},
     {"id":{"name":"obj_Menu","path":"objects/obj_Menu/obj_Menu.yy",},"order":14,},
     {"id":{"name":"obj_Fire","path":"objects/obj_Fire/obj_Fire.yy",},"order":8,},

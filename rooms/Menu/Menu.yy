@@ -25,14 +25,14 @@
   "roomSettings": {
     "inheritRoomSettings": false,
     "Width": 1766,
-    "Height": 997,
+    "Height": 1366,
     "persistent": false,
   },
   "viewSettings": {
     "inheritViewSettings": false,
     "enableViews": false,
     "clearViewBackground": false,
-    "clearDisplayBuffer": true,
+    "clearDisplayBuffer": false,
   },
   "physicsSettings": {
     "inheritPhysicsSettings": false,

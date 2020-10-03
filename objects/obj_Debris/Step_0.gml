@@ -22,8 +22,10 @@ if(target == noone){
 
 }
 else{
-	x = lerp(x, target.x, 0.1);
-	y = lerp(y, target.y, 0.1);
+
+	x = lerp(x, target.x, 0.15);
+	y = lerp(y, target.y, 0.15);
+	part_particles_create(global.partM.ps, x, y, global.partM.circles, 1);
 	
 	if(place_meeting(x, y, target)){
 		switch(mineral){
@@ -42,4 +44,6 @@ else{
 		}
 		instance_destroy();
 	}
+	
+	
 }

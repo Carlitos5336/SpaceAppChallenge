@@ -11,12 +11,17 @@ for(var i =0; i < 2; i++){
 	anim.image_angle = -90 + point_direction(global.planet.x, global.planet.y, x, y);
 }
 
-for(var i = 0; i < quantity; i++){
-		var _radius = random_range(radius - 20, radius + 20);
-		var _speed = random_range(0.2, 0.35);
-		var ast = instance_create_layer(x, y, "Instances", obj_Debris);
-		ast.image_index = choose(2, 3);
-		ast.radius = _radius;
-		ast.v_speed = _speed;
-		ast.ang_speed = ang_speed;
+if(drop){
+	for(var i = 0; i < quantity; i++){
+			var _radius = random_range(radius - 20, radius + 20);
+			var _speed = random_range(0.05, 0.1);
+			if(radius < 5000){
+				_speed = random_range(0.2, 0.35);
+			}
+			var ast = instance_create_layer(x, y, "Instances", obj_Debris);
+			ast.image_index = choose(2, 3);
+			ast.radius = _radius;
+			ast.v_speed = _speed;
+			ast.ang_speed = ang_speed;
+	}
 }

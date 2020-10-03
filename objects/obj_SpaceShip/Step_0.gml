@@ -33,7 +33,7 @@ h_speed -= grav * gravscale;
 image_angle = point_direction(x, y, mouse_x, mouse_y) - 90;
 
 ang_speed += v_speed/(3*move_speed);
-radius = clamp(radius + h_speed*5, 0, radius_range[1]);
+radius = clamp(radius + h_speed*7, 0, radius_range[1]);
 
 
 x = global.planet.x + (radius - x_offset) * cos(degtorad(ang_speed));

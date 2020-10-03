@@ -17,7 +17,7 @@ respawn_time = 1 * room_speed;
 
 function generate_asteroids(){
 	for(var i = 0; i < quantity_in; i++){
-		var _radius = random_range(2000, 3500);
+		var _radius = random_range(2450, 3500);
 		var _speed = random_range(0.15, 0.35);
 		var _angle = random_range(0, 359);
 		var _x = lengthdir_x(_radius, _angle);
@@ -42,5 +42,3 @@ function generate_asteroids(){
 }
 
 generate_asteroids();
-
-display_set_gui_size(1766, 1366);
