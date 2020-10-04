@@ -2,6 +2,15 @@ if(!no_explosion){
 	global.camera.screen_shake(0.5, 20);
 	var quantity = random_range(2, 5);
 	if(drop){
+		if(instance_exists(global.player)){
+			if(distance_to_object(global.player) < 2000){
+				audio_play_sound(sfx_explosionclose, 0, 0);
+			}
+			else{
+				audio_play_sound(sfx_explosion, 0, 0);
+			}
+		}
+		
 		for(var i =0; i < 2; i++){
 			var anim = instance_create_layer(x, y, "Instances", obj_Animation);
 			anim.sprite_index = choose(spr_exp1, spr_exp3);
@@ -25,6 +34,7 @@ if(!no_explosion){
 		}
 	}
 	else{
+		audio_play_sound(sfx_death, 0, 0);
 		for(var i =0; i < 2; i++){
 			var anim = instance_create_layer(x, y, "Instances", obj_Animation);
 			anim.sprite_index = choose(spr_exp2, spr_exp4);

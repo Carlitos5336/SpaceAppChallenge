@@ -14,7 +14,7 @@ radius_p = 500;
 no_explosion = false;
 
 tet = instance_create_layer(x, y - 600, "Instances", obj_Text);
-tet.text = "Repair Satelite";
+tet.text = "Repair Satellite";
 tet.visible = false;
 
 bar = instance_create_layer(x, y, "Front", obj_Bar);

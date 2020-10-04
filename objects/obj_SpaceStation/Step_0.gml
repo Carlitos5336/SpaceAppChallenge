@@ -44,6 +44,7 @@ else{
 }
 
 function process(){
+	audio_play_sound(sfx_processing, 0, 0);
 	if(bar.image_speed == 0 and global.ores > 0){
 		bar.image_speed = 0.6;
 		bar.image_index = 0;
@@ -55,6 +56,7 @@ function process(){
 }
 
 function end_process(){
+	audio_play_sound(sfx_processed, 0, 0);
 	var counter = global.ores;
 	for(var i = 0; i < counter; i++){
 		var n = random(1);

@@ -1,4 +1,4 @@
-
+audio_play_sound(sfx_death, 0, 0);
 for(var i =0; i < 2; i++){
 	var anim = instance_create_layer(x, y, "Instances", obj_Animation);
 	if(death_by_planet) anim.sprite_index = choose(spr_exp2, spr_exp4);

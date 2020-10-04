@@ -89,3 +89,7 @@ generate_asteroids();
 
 padding = 50;
 bscale = 1;
+
+if(!audio_is_playing(mus_Level3)){
+	audio_play_sound(mus_Level3, 0, 1);
+}

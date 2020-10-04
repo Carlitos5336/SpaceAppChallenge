@@ -37,6 +37,7 @@ function check(){
 }
 
 function process(){
+	audio_play_sound(sfx_processing, 0, 0);
 	if(bar.image_speed == 0 and check()){
 		bar.image_speed = 0.6;
 		bar.image_index = 0;
@@ -49,6 +50,7 @@ function process(){
 
 function end_process(){
 	
+	audio_play_sound(sfx_repaired, 0, 0);
 	if(instance_exists(global.player)){
 		global.player.control = true;
 		global.player.ang_speed = ang_speed;
@@ -67,6 +69,7 @@ function end_process(){
 	
 	instance_deactivate_all(true);
 	instance_activate_object(obj_Cursor);
+	instance_activate_object(obj_Input);
 
 	button = instance_create_layer(x, y + 1700, "Instances", obj_Text);
 	button.text = "Nice! I got it.";
@@ -81,7 +84,7 @@ with(obj_Cursor){
 		other.on_box = true;
 	}
 }
-if(mouse_check_button_pressed(mb_left) and on_box){
+if((mouse_check_button_pressed(mb_left) and on_box) or (pause and global.input.commit)){
 	instance_activate_all();
 	if(instance_exists(global.player)){
 		global.player.control = true;

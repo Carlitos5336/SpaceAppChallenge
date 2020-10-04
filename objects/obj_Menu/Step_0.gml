@@ -1,7 +1,14 @@
+bscale = lerp(bscale, 1, 0.1);
+red = lerp(red, 255, 0.1);
+green = lerp(green, 255, 0.1);
+blue = lerp(blue, 255, 0.1);
+
 if(control)
 {
 	// SONIDO
-	//if(selected != prev_selected)
+	if(selected != prev_selected){
+		audio_play_sound(sfx_change, 0, 0);
+	}
 
 
 	// CAMBIO DE OPCIÓN EN MENÚ
@@ -17,16 +24,20 @@ if(control)
 
 	if(global.input.commit)
 	{
+		audio_play_sound(sfx_commit, 0, 0);
+		bscale = 1.5;
+		red = 0;
+		blue = 0;
 		switch(selected)
 		{
 			case "0":
 				control = false;
-				transition(Level1, 2, 4, c_white);
+				transition(Level1, 1, 1, c_white);
 				break;
 			
 			case "1":
 				control = false;
-				transition(Credits, 2, 4, c_white);
+				transition(Credits, 1, 1, c_white);
 				break;
 		}
 	}

@@ -20,3 +20,8 @@ cursor_padding = 60;
 
 control = true; // indica si el usuario puede mover el cursor.
 
+bscale = 1;
+red = 255;
+green = 255;
+blue = 255;
+
