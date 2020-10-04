@@ -1,0 +1,1 @@
+bscale = lerp(bscale, 1, 0.1);
