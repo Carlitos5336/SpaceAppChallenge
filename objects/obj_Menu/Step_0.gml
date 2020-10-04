@@ -23,6 +23,11 @@ if(control)
 				control = false;
 				transition(Level1, 2, 4, c_white);
 				break;
+			
+			case "1":
+				control = false;
+				transition(Credits, 2, 4, c_white);
+				break;
 		}
 	}
 }

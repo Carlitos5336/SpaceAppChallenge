@@ -1,4 +1,3 @@
-mineral = choose("iron", "iron", "iron", "iron", "iron", "iron", "gold", "nickel", "nickel", "nickel", "platinum", "platinum")
 
 v_speed = 0;
 ang_speed = 0;

@@ -10,12 +10,16 @@ function get_hit(dmg, dir){
 	var anim = instance_create_layer(x, y, "Instances", obj_Animation);
 	anim.sprite_index = choose(spr_exp1, spr_exp3);
 	anim.image_index = 0;
+	var _scale = random_range(3, 4);
+	anim.image_xscale = _scale;
+	anim.image_yscale = _scale;
+	anim.image_angle = -90 + point_direction(global.planet.x, global.planet.y, x, y);
 	
 	var move_Y = lengthdir_y(1, dir - point_direction(global.planet.x, global.planet.y, x, y));
 	var move_X = lengthdir_x(1, dir - point_direction(global.planet.x, global.planet.y, x, y));
 	
-	h_speed = move_speed * move_X * 4;
-	v_speed = move_speed * move_Y;	
+	h_speed = move_speed * move_X * 4 / 2;
+	v_speed = move_speed * move_Y / 2;	
 }
 
 image_xscale = lerp(image_xscale, 1, 0.1);

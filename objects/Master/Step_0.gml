@@ -1,4 +1,4 @@
-show_debug_message(string(transitioning))
+
 switch(room){
 		
 	case Country:
@@ -14,6 +14,16 @@ switch(room){
 		if(!instance_exists(obj_Menu)){
 			instance_create_layer(room_width/2, room_height/2, "Instances", obj_Menu)
 		}
+		break;
+		
+	case Credits:
+		if(!instance_exists(obj_Credits)){
+			instance_create_layer(room_width/2, room_height/2, "Instances", obj_Credits)
+		}
+		break;
+	
+	case Transit:
+		transition(Level1, 0.1, 0.1, c_white);
 		break;
 	
 }

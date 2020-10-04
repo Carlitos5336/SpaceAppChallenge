@@ -13,18 +13,27 @@ v_speed = 0;
 
 ang_speed = 0;
 radius = 2500;
-radius_range = [1400, 5000];
+radius_range = [1400, 7500];
 
 x_offset = 0;
 y_offset = 0;
 
-speed_0 = 1;
+death_by_planet = false;
+
+speed_0 = 1.7;
 impulse = 1.1;
 
+control = true;
 rotation_dir = -1;
 
-bullet_spd = 20;
+end_game = false;
+input = true;
+
+bullet_spd = 30;
 bullet_dmg = 5;
 
 fire = instance_create_layer(x, y, "Instances", obj_Fire);
 fire.visible = false;
+
+on_process = false;
+on_repair = false;

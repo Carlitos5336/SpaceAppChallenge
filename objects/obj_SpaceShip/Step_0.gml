@@ -1,4 +1,7 @@
-var move = global.input.move;
+var move = 0;
+if(input){
+	move = global.input.move;
+}
 
 var move_Y = 0;
 var move_X = 0;
@@ -31,14 +34,13 @@ h_speed -= grav * gravscale;
 // 2D to circular movement
 
 image_angle = point_direction(x, y, mouse_x, mouse_y) - 90;
+if(control){
+	ang_speed += v_speed/(3*move_speed);
+	radius = clamp(radius + h_speed*7, 0, radius_range[1]);
 
-ang_speed += v_speed/(3*move_speed);
-radius = clamp(radius + h_speed*7, 0, radius_range[1]);
-
-
-x = global.planet.x + (radius - x_offset) * cos(degtorad(ang_speed));
-y = global.planet.y + (radius - y_offset) * sin(degtorad(ang_speed));
-
+	x = global.planet.x + (radius - x_offset) * cos(degtorad(ang_speed));
+	y = global.planet.y + (radius - y_offset) * sin(degtorad(ang_speed));
+}
 
 
 function shoot(){
@@ -55,13 +57,47 @@ function shoot(){
 	var move_Y = lengthdir_y(1, 180 + point_direction(x, y, mouse_x, mouse_y) - point_direction(global.planet.x, global.planet.y, x, y));
 	var move_X = lengthdir_x(1, 180 + point_direction(x, y, mouse_x, mouse_y) - point_direction(global.planet.x, global.planet.y, x, y));
 	
-	h_speed = move_speed * move_X;
-	v_speed = move_speed * move_Y;
+	h_speed = 1 * move_X;
+	v_speed = 1 * move_Y;
 	
 }
 
-if(mouse_check_button_pressed(mb_left)){
-	shoot();
+on_process = false;
+with(obj_Cursor){
+	if(place_meeting(x, y, obj_SpaceStation.tet)){
+		if(obj_SpaceStation.tet.visible) other.on_process = true;
+	}
+}
+
+end_game = false;
+with(obj_Cursor){
+	if(place_meeting(x, y, obj_SpaceStation.tet1)){
+		if(obj_SpaceStation.tet1.visible) other.end_game = true;
+	}
+}
+
+on_repair = false;
+with(obj_Cursor){
+	var sat = instance_nearest(x, y, obj_Satelite);
+	if(place_meeting(x, y, sat.tet)){
+		if(sat.tet.visible) other.on_repair = true;
+	}
+}
+if(mouse_check_button_pressed(mb_left) and control){
+	if(on_process){
+		obj_SpaceStation.process();
+	}
+	else if(on_repair){
+		var sat = instance_nearest(x, y, obj_Satelite);
+		sat.process();
+	}
+	else if(end_game){
+		input = false;
+		transition(Credits, 1, 1, c_white);
+	}
+	else{
+		shoot();
+	}
 }
 
 image_xscale = lerp(image_xscale, 1, 0.1);

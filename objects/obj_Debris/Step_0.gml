@@ -28,20 +28,7 @@ else{
 	part_particles_create(global.partM.ps, x, y, global.partM.circles, 1);
 	
 	if(place_meeting(x, y, target)){
-		switch(mineral){
-			case "iron":
-				global.iron += 1;
-				break;
-			case "gold":
-				global.gold += 1;
-				break;
-			case "nickel":
-				global.nickel += 1;
-				break;
-			case "platinum":
-				global.platinum += 1;
-				break;
-		}
+		global.ores += 1;
 		instance_destroy();
 	}
 	

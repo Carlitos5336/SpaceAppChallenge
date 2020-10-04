@@ -3,7 +3,7 @@
 menu[0] = "New Game";
 menu[1] = "Credits";
 
-title = "Satelites"; // título del juego
+title = "Satellites"; // título del juego
 title_size = 1; // tamaño del título
 options_size = 1; // tamaño de las letras del menú de opciones
 

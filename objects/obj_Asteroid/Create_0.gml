@@ -9,3 +9,5 @@ h_speed = 0;
 move_speed = 0.4;
 
 drop = true;
+
+no_explosion = false;

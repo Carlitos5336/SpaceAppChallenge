@@ -8,3 +8,5 @@ move = keyboard_check(vk_space);
 zoom = keyboard_check(ord("C"));
 
 commit = keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_enter);
+
+escape = keyboard_check_pressed(vk_escape);
