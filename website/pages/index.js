@@ -87,7 +87,10 @@ const Mission = () => (
 const Video = () => {
   return (
     <section className="flex items-center justify-center pb-24 mt-20 md:mt-0">
-      <button className="relative z-10 flex flex-col items-center px-20 py-4 space-y-8 sm:px-24">
+      <a
+        href="https://drive.google.com/file/d/1ElW2UDWf6gQsSbiCgSEM4c7y9JsW_5AO/view?usp=sharing"
+        className="relative z-10 flex flex-col items-center px-20 py-4 space-y-8 sm:px-24"
+      >
         <img
           style={{ zIndex: "-1" }}
           src="/red-background.png"
@@ -101,7 +104,7 @@ const Video = () => {
         <span className="text-2xl text-white sm:text-3xl md:text-5xl font-display lg:text-7xl">
           Satellite
         </span>
-      </button>
+      </a>
     </section>
   );
 };
