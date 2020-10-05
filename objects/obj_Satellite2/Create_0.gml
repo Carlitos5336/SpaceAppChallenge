@@ -1,7 +1,10 @@
 // Inherit the parent event
 event_inherited();
 
-iron = 1;
+iron = 25;
+
+create_cells();
+
 
 name = "Kepler";
 

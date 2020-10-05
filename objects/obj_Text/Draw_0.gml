@@ -1,5 +1,10 @@
 draw_set_alpha(1);
 draw_set_font(fnt);
-draw_self();
+if(button){
+	draw_self();
+}
 draw_set_halign(fa_center);
-draw_text_transformed(x, y - 70, text, 3, 3, 0);
+draw_set_valign(fa_center);
+var color = make_color_rgb(red, green, blue);
+draw_text_transformed_color(x, y, text, bscale, bscale, 0, color, color, color, color, 1);
+draw_set_valign(fa_top);

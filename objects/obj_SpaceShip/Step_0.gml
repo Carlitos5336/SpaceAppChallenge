@@ -48,7 +48,7 @@ h_speed -= grav * gravscale;
 // 2D to circular movement
 
 image_angle = point_direction(x, y, mouse_x, mouse_y) - 90;
-if(control){
+if(control and input){
 	ang_speed += v_speed;
 	radius = clamp(radius + h_speed*7, 0, radius_range[1]);
 
@@ -119,6 +119,7 @@ if(mouse_check_button_pressed(mb_left) and control){
 	}
 	else if(end_game){
 		input = false;
+		audio_play_sound(sfx_applause, 0, 0);
 		transition(Credits, 1, 1, c_white);
 	}
 	else{
@@ -145,4 +146,9 @@ else{
 	}
 	part_particles_create(global.partM.ps, x, y, global.partM.smoke, 1);
 	fire.visible = true;
+}
+
+if(!input){
+	x = lerp(x, obj_SpaceStation.x, 0.1);
+	y = lerp(y, obj_SpaceStation.y, 0.1);
 }

@@ -30,6 +30,10 @@ else{
 	if(place_meeting(x, y, target)){
 		audio_play_sound(sfx_gather, 0, 0);
 		global.ores += 1;
+		obj_Spawn.ores_scale = 1.5;
+		obj_Spawn.ores_alpha = 1;
+		obj_Spawn.ores_color = c_green;
+		obj_Spawn.ores_n += 1;
 		instance_destroy();
 	}
 	

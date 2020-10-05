@@ -1,4 +1,4 @@
-move_speed = 2.8;
+move_speed = 2;
 vmove_spd = 0.4;
 
 acceleration_a = 0.0087;
@@ -16,7 +16,7 @@ h_speed = 0;
 v_speed = 0;
 
 ang_speed = 0;
-radius = 4000;
+radius = random_range(4500, 5000);
 radius_range = [1400, 7500];
 
 x_offset = 0;

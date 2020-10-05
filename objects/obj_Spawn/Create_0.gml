@@ -17,21 +17,16 @@ global.earth_strikes = 0;
 global.satellites_fixed = 0;
 
 ss = instance_create_layer(x, y, "Instances", obj_SpaceStation);
-var _radius = random_range(4000, 5500);
-var _speed = 0.1
-var _angle = random_range(45, 315);
-var _x = lengthdir_x(_radius, _angle);
-var _y = lengthdir_y(_radius, _angle);
+ss.v_speed = 0.1;
 ss.image_index = choose(0, 1);
-ss.radius = _radius;
-ss.v_speed = _speed;
-ss.ang_speed = random_range(45, 315);
+ss.radius = global.player.radius;
+ss.ang_speed = global.player.ang_speed;
 
 var sats = [obj_Satellite1, obj_Satellite2, obj_Satellite3];
 
 for(var i = 0; i < 3; i++){
 	st1 = instance_create_layer(x, y, "Instances", sats[i]);
-	var _radius = random_range(4000, 5500);
+	var _radius = random_range(4500, 5000);
 	var _speed = 0.1
 	var _angle = random_range(45, 315);
 	var _x = lengthdir_x(_radius, _angle);
@@ -43,10 +38,9 @@ for(var i = 0; i < 3; i++){
 }
 
 
-quantity_1 = 20;
+quantity_1 = 25;
 quantity_2 = 30;
-quantity_3 = 30;
-respawn_time = 1 * room_speed;
+quantity_3 = 35;
 
 function generate_asteroids(){
 	for(var i = 0; i < quantity_1; i++){
@@ -87,9 +81,45 @@ function generate_asteroids(){
 
 generate_asteroids();
 
-padding = 50;
+padding = 85;
 bscale = 1;
 
 if(!audio_is_playing(mus_Level3)){
 	audio_play_sound(mus_Level3, 0, 1);
+}
+
+
+// TEXT UI variables
+
+ores_scale = 0.8;
+iron_scale = 0.8;
+gold_scale = 0.8;
+plat_scale = 0.8;
+nic_scale = 0.8;
+
+ores_alpha = 0;
+iron_alpha = 0;
+gold_alpha = 0;
+plat_alpha = 0;
+nic_alpha = 0;
+
+ores_n = 0;
+iron_n = 0;
+gold_n = 0;
+plat_n = 0;
+nic_n = 0;
+
+ores_color = c_white;
+iron_color = c_white;
+gold_color = c_white;
+plat_color = c_white;
+nic_color = c_white;
+
+end_text = "";
+
+function show(te){
+	if(end_text == ""){
+		end_text = te;
+		bscale = 1.5;
+	}
 }

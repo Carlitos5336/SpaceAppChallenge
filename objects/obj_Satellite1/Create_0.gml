@@ -1,7 +1,10 @@
 // Inherit the parent event
 event_inherited();
 
-iron = 1;
+iron = 40;
+nickel = 5;
+
+create_cells();
 
 name = "Google Earth Satellite";
 

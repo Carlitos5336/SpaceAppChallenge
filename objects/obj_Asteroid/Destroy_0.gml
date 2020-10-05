@@ -29,7 +29,7 @@ if(!no_explosion){
 				var ast = instance_create_layer(x, y, "Instances", obj_Debris);
 				ast.image_index = choose(2, 3);
 				ast.radius = _radius;
-				ast.v_speed = _speed;
+				ast.v_speed = _speed * sign(v_speed);
 				ast.ang_speed = ang_speed;
 		}
 	}

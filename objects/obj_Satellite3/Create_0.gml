@@ -1,7 +1,13 @@
 // Inherit the parent event
 event_inherited();
 
-iron = 1;
+iron = 10;
+gold = 1;
+platinum = 1;
+nickel = 1;
+
+create_cells();
+
 
 name = "Tess";
 

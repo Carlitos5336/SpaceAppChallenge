@@ -26,9 +26,29 @@ nickel = 0;
 platinum = 0;
 gold = 0;
 
+mins = [iron, nickel, platinum, gold];
+images = [spr_Iron, spr_Nickel, spr_Platinum, spr_Gold];
+
+
 fixed = false;
 
 pause = false;
 
 button = noone;
 on_box = false;
+
+cells = ds_list_create();
+
+function create_cells(){
+	mins = [iron, nickel, platinum, gold];
+	for(var i = 0; i < 4; i++){
+		if(mins[i] > 0){
+			var new_cell = instance_create_layer(x, y, "Instances", obj_Cell);
+			new_cell.number = mins[i];
+			new_cell.image = images[i];
+			new_cell.visible = false;
+			new_cell.rpos = i;
+			ds_list_add(cells, new_cell);
+		}
+	}
+}

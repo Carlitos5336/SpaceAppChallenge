@@ -1,6 +1,7 @@
 {
   "resources": [
     {"id":{"name":"spr_Asteroid2","path":"sprites/spr_Asteroid2/spr_Asteroid2.yy",},"order":12,},
+    {"id":{"name":"fnt_Cell","path":"fonts/fnt_Cell/fnt_Cell.yy",},"order":3,},
     {"id":{"name":"spr_Bullet","path":"sprites/spr_Bullet/spr_Bullet.yy",},"order":5,},
     {"id":{"name":"sfx_processed","path":"sounds/sfx_processed/sfx_processed.yy",},"order":9,},
     {"id":{"name":"sfx_explosionclose","path":"sounds/sfx_explosionclose/sfx_explosionclose.yy",},"order":13,},
@@ -22,6 +23,7 @@
     {"id":{"name":"obj_Bar","path":"objects/obj_Bar/obj_Bar.yy",},"order":19,},
     {"id":{"name":"obj_Camera","path":"objects/obj_Camera/obj_Camera.yy",},"order":6,},
     {"id":{"name":"spr_Satellite2","path":"sprites/spr_Satellite2/spr_Satellite2.yy",},"order":18,},
+    {"id":{"name":"obj_Cell","path":"objects/obj_Cell/obj_Cell.yy",},"order":24,},
     {"id":{"name":"Country","path":"rooms/Country/Country.yy",},"order":3,},
     {"id":{"name":"spr_Iron","path":"sprites/spr_Iron/spr_Iron.yy",},"order":22,},
     {"id":{"name":"spr_Satellite1","path":"sprites/spr_Satellite1/spr_Satellite1.yy",},"order":17,},
@@ -48,6 +50,7 @@
     {"id":{"name":"spr_Nickel","path":"sprites/spr_Nickel/spr_Nickel.yy",},"order":24,},
     {"id":{"name":"obj_Satelite","path":"objects/obj_Satelite/obj_Satelite.yy",},"order":16,},
     {"id":{"name":"obj_Animation","path":"objects/obj_Animation/obj_Animation.yy",},"order":10,},
+    {"id":{"name":"spr_Cell","path":"sprites/spr_Cell/spr_Cell.yy",},"order":29,},
     {"id":{"name":"sfx_change","path":"sounds/sfx_change/sfx_change.yy",},"order":14,},
     {"id":{"name":"sfx_explosion","path":"sounds/sfx_explosion/sfx_explosion.yy",},"order":12,},
     {"id":{"name":"sfx_gather","path":"sounds/sfx_gather/sfx_gather.yy",},"order":8,},
@@ -70,6 +73,7 @@
     {"id":{"name":"spr_exp3","path":"sprites/spr_exp3/spr_exp3.yy",},"order":10,},
     {"id":{"name":"spr_Asteroid3","path":"sprites/spr_Asteroid3/spr_Asteroid3.yy",},"order":16,},
     {"id":{"name":"spr_exp1","path":"sprites/spr_exp1/spr_exp1.yy",},"order":8,},
+    {"id":{"name":"sfx_applause","path":"sounds/sfx_applause/sfx_applause.yy",},"order":15,},
     {"id":{"name":"sfx_move","path":"sounds/sfx_move/sfx_move.yy",},"order":4,},
     {"id":{"name":"sfx_death","path":"sounds/sfx_death/sfx_death.yy",},"order":3,},
     {"id":{"name":"fnt_Menu","path":"fonts/fnt_Menu/fnt_Menu.yy",},"order":1,},
