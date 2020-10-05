@@ -10,8 +10,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "mus_Level3.mp3",
-  "duration": 168.886627,
+  "soundFile": "mus_Level3.wav",
+  "duration": 16.005,
   "parent": {
     "name": "Sonidos",
     "path": "folders/Sonidos.yy",

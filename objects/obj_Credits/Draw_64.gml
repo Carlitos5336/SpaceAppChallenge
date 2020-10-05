@@ -18,7 +18,7 @@ for(var i = 0; i < n_cred; i++)
 		else
 		{
 			draw_set_font(fnt_Menu);
-			draw_text(display_get_gui_width()/2, y_pos, creditos[| i]);
+			draw_text_transformed(display_get_gui_width()/2, y_pos, creditos[| i], 0.7, 0.7, 0);
 		}
 		done = false;
 	}

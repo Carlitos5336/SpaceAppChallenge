@@ -45,7 +45,7 @@ ds_list_add(creditos, "");
 ds_list_add(creditos, "");
 
 ds_list_add(creditos, "Music");
-ds_list_add(creditos, "Carlos Ogando");
+ds_list_add(creditos, "Space Battle by GooseNinja");
 ds_list_add(creditos, "");
 ds_list_add(creditos, "");
 ds_list_add(creditos, "");

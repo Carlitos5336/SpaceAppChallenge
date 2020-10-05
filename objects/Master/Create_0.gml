@@ -2,7 +2,11 @@ global.input = instance_create_layer(x, y, "Instances", obj_Input);
 instance_create_layer(x, y, "Instances", obj_Transition);
 instance_create_layer(x, y, "Instances", obj_Cursor);
 
-window_set_size(1366, 1366);
+
+base_width = room_width;
+base_height = room_height;
+width = base_width;
+height = base_height;
 
 timer = 2.5 * room_speed;
 transitioning = false;

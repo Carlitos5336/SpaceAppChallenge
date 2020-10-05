@@ -61,6 +61,7 @@
     {"id":{"name":"animation_frame","path":"scripts/animation_frame/animation_frame.yy",},"order":0,},
     {"id":{"name":"obj_SpaceShip","path":"objects/obj_SpaceShip/obj_SpaceShip.yy",},"order":0,},
     {"id":{"name":"spr_Cursor","path":"sprites/spr_Cursor/spr_Cursor.yy",},"order":27,},
+    {"id":{"name":"scale_canvas","path":"scripts/scale_canvas/scale_canvas.yy",},"order":3,},
     {"id":{"name":"spr_Asteroid","path":"sprites/spr_Asteroid/spr_Asteroid.yy",},"order":6,},
     {"id":{"name":"animation_end","path":"scripts/animation_end/animation_end.yy",},"order":1,},
     {"id":{"name":"obj_Input","path":"objects/obj_Input/obj_Input.yy",},"order":1,},
