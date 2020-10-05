@@ -5,6 +5,7 @@ const IndexPage = () => {
       <Hero />
       <Mission />
       <Video />
+      <CTA />
     </main>
   );
 };
@@ -35,7 +36,7 @@ const Hero = () => (
         <h1 className="text-4xl text-center text-white uppercase md:text-6xl lg:text-8xl font-display">
           Satellites
         </h1>
-        <p className="text-xl font-medium tracking-widest text-center text-white uppercase md:text-3xl lg:text-4xl">
+        <p className="text-xl font-bold tracking-widest text-center text-white uppercase md:text-3xl lg:text-4xl">
           Save your planet
         </p>
       </header>
@@ -65,7 +66,7 @@ const Mission = () => (
         <h1 className="text-4xl text-center text-white uppercase md:text-6xl lg:text-7xl font-display">
           You have a mission
         </h1>
-        <p className="text-2xl font-medium tracking-widest text-center text-white uppercase md:text-4xl">
+        <p className="text-2xl font-bold tracking-widest text-center text-white uppercase md:text-4xl">
           Restore the satellites
         </p>
       </header>
@@ -85,26 +86,39 @@ const Mission = () => (
 );
 
 const Video = () => {
+  const [showVideo, setShowVideo] = React.useState(false);
+
   return (
     <section className="flex items-center justify-center pb-24 mt-20 md:mt-0">
-      <a
-        href="https://drive.google.com/file/d/1ElW2UDWf6gQsSbiCgSEM4c7y9JsW_5AO/view?usp=sharing"
-        className="relative z-10 flex flex-col items-center px-20 py-4 space-y-8 sm:px-24"
-      >
-        <img
-          style={{ zIndex: "-1" }}
-          src="/red-background.png"
-          className="absolute w-full h-full rounded-lg"
-        />
+      {showVideo ? (
+        <iframe
+          className="z-10 w-full max-w-3xl rounded-lg"
+          height="500"
+          src="https://www.youtube.com/embed/i89Du0jAfeQ"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      ) : (
+        <button
+          onClick={() => setShowVideo(true)}
+          className="relative z-10 flex flex-col items-center px-20 py-4 space-y-8 sm:px-24"
+        >
+          <img
+            style={{ zIndex: "-1" }}
+            src="/red-background.png"
+            className="absolute w-full h-full rounded-lg"
+          />
 
-        <span className="text-xl font-light text-white uppercase sm:text-2xl md:text-4xl lg:text-6xl">
-          Get To Know
-        </span>
-        <PlayButton />
-        <span className="text-2xl text-white sm:text-3xl md:text-5xl font-display lg:text-7xl">
-          Satellite
-        </span>
-      </a>
+          <span className="text-xl font-light text-white uppercase sm:text-2xl md:text-4xl lg:text-6xl">
+            Get To Know
+          </span>
+          <PlayButton />
+          <span className="text-2xl text-white sm:text-3xl md:text-5xl font-display lg:text-7xl">
+            Satellites
+          </span>
+        </button>
+      )}
     </section>
   );
 };
@@ -172,6 +186,22 @@ const Button = ({ children }) => (
       <div className="absolute bottom-0 right-0 w-1 h-1 transition-colors duration-200 ease-in-out bg-black group-hover:bg-white" />
     </a>
   </div>
+);
+
+const CTA = () => (
+  <section className="relative flex flex-col items-center justify-center pt-20 pb-24 space-y-8">
+    <header>
+      <h1 className="max-w-6xl text-2xl text-center text-white uppercase md:text-4xl lg:text-6xl font-display">
+        Are you ready to save the sattelites?
+      </h1>
+    </header>
+    <div className="flex flex-col items-center space-y-2">
+      <Button>Play Now</Button>
+      <p className="text-xs text-white">
+        *it'll take some seconds to load the game
+      </p>
+    </div>
+  </section>
 );
 
 export default IndexPage;
